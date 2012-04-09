@@ -15,5 +15,10 @@ namespace test
         {
             InitializeComponent();
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
