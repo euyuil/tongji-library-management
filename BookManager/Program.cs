@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
-namespace test
+namespace BookManager
 {
     static class Program
     {
@@ -15,7 +14,7 @@ namespace test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestForm());
+            Application.Run(new Login());
         }
     }
 }
