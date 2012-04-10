@@ -1,0 +1,18 @@
+QLF
+	财务系统？
+
+Eating
+	RentalManager 的界面
+	图书表
+
+Li Mengdi
+	BookManager 的界面
+
+Renzhen
+	ReaderUtilities 的界面
+
+Lv Mengqi
+	实现读者表
+
+Dong Jin
+	图书分类表

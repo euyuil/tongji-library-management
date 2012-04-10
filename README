@@ -1,7 +1,16 @@
 Hello! This is our database course desgin project. It's a library management system. Feel free to view the code.
 
-BookManager 由崔昊负责，可被管理员使用。用于对书籍信息的管理，如添加、删除、查询、修改等。
+BookManager 由 SHS 负责，可被管理员使用。用于对书籍信息的管理，如添加、删除、查询、修改等。
 
 RentalManager 是用于借书还书登记的，由管理员使用。
 
 ReaderUtilities 是给图书馆的读者使用的查询工具，可以查询书籍信息，或是预定书籍等。还可进行用户注册。
+
+==== TODO LIST ====
+
+2012-04-11 QLF 说的财务系统，怎么做？
+
+2012-04-11 程序的界面设计，如何分配？
+	Eating 设计 RentalManager 的界面。
+	Li Mengdi 设计 BookManager 的界面。
+	Renzhen 设计 ReaderUtilities 的界面。
