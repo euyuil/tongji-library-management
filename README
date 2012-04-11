@@ -1,10 +1,10 @@
-Hello! This is our database course desgin project. It's a library management system. Feel free to view the code.
+﻿Hello! This is our database course desgin project. It's a library management system. Feel free to view the code.
 
 BookManager 由 SHS 负责，可被管理员使用。用于对书籍信息的管理，如添加、删除、查询、修改等。
 
 RentalManager 是用于借书还书登记的，由管理员使用。
 
-ReaderUtilities 是给图书馆的读者使用的查询工具，可以查询书籍信息，或是预定书籍等。还可进行用户注册。
+ReaderUtilities 是给图书馆的读者使用的查询工具，可以查询书籍信息，可以进行用户注册，然后享有图书馆用户的预约功能与荐购功能。
 
 ==== TODO LIST ====
 
