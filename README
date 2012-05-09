@@ -17,3 +17,17 @@ ReaderUtilities 是给图书馆的读者使用的查询工具，可以查询书�
 	Renzhen 设计 ReaderUtilities 的界面。
 2012-04-19 
         收到:-D --Eating
+2012-05-9
+	一共有四个模块，对应有四个项目
+	咱们这一次的任务是，给每个项目做界面，
+	只是做界面不需要实现功能，所以只要拖控件（控件不需要触发事件），加加图片就行了
+	具体每个项目（模块）的说明请参考 Documents/user-interface-desing.txt
+	请在明晚之前尽量提交，因为后天就要交到服务器了。。。。
+	大家加油哦~~
+	具体分工如下：
+		阿娇：FrontTerminal
+		吕：ReaderTerminal
+		GreenMoon55：BackTerminal
+		Eating：BossTerminal
+	先辛苦你们了，闲着的人可以考虑考虑自己数据库那部分还缺少啥，参考Document/library-db-design.png
+	
