@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d5bbcae3-4cb3-450a-ab24-5094ed50dddb</ProjectGuid>
+    <ProjectGuid>{40B11B69-BB6B-4E68-AE7E-44CEEF79CFF3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BossTerminal</RootNamespace>

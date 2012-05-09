@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>ad3d8deb-1595-4888-9bb1-4f27a37347d7</ProjectGuid>
+    <ProjectGuid>{9E46724F-F853-4B10-9ABF-370EF3C7D7CD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BackTerminal</RootNamespace>
