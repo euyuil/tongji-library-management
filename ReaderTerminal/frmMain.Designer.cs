@@ -49,6 +49,9 @@
             this.mnuReaderLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tpgReaderInfo = new System.Windows.Forms.TabPage();
+            this.tpgBookRental = new System.Windows.Forms.TabPage();
+            this.tpgBookReserve = new System.Windows.Forms.TabPage();
             this.pnlWrapperMain.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.tpgBookSearch.SuspendLayout();
@@ -72,6 +75,9 @@
             // tabMain
             // 
             this.tabMain.Controls.Add(this.tpgBookSearch);
+            this.tabMain.Controls.Add(this.tpgReaderInfo);
+            this.tabMain.Controls.Add(this.tpgBookRental);
+            this.tabMain.Controls.Add(this.tpgBookReserve);
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMain.Location = new System.Drawing.Point(7, 0);
             this.tabMain.Name = "tabMain";
@@ -204,7 +210,7 @@
             // mnuTerminalExit
             // 
             this.mnuTerminalExit.Name = "mnuTerminalExit";
-            this.mnuTerminalExit.Size = new System.Drawing.Size(116, 22);
+            this.mnuTerminalExit.Size = new System.Drawing.Size(152, 22);
             this.mnuTerminalExit.Text = "退出(&X)";
             this.mnuTerminalExit.Click += new System.EventHandler(this.mnuTerminalExit_Click);
             // 
@@ -222,25 +228,26 @@
             // mnuReaderLogin
             // 
             this.mnuReaderLogin.Name = "mnuReaderLogin";
-            this.mnuReaderLogin.Size = new System.Drawing.Size(118, 22);
+            this.mnuReaderLogin.Size = new System.Drawing.Size(152, 22);
             this.mnuReaderLogin.Text = "登录(&L)";
             this.mnuReaderLogin.Click += new System.EventHandler(this.mnuReaderLogin_Click);
             // 
             // mnuReaderRegister
             // 
             this.mnuReaderRegister.Name = "mnuReaderRegister";
-            this.mnuReaderRegister.Size = new System.Drawing.Size(118, 22);
+            this.mnuReaderRegister.Size = new System.Drawing.Size(152, 22);
             this.mnuReaderRegister.Text = "注册(&R)";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(115, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // mnuReaderLogout
             // 
+            this.mnuReaderLogout.Enabled = false;
             this.mnuReaderLogout.Name = "mnuReaderLogout";
-            this.mnuReaderLogout.Size = new System.Drawing.Size(118, 22);
+            this.mnuReaderLogout.Size = new System.Drawing.Size(152, 22);
             this.mnuReaderLogout.Text = "登出(&O)";
             // 
             // 帮助HToolStripMenuItem
@@ -254,8 +261,36 @@
             // 关于AToolStripMenuItem
             // 
             this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于AToolStripMenuItem.Text = "关于(&A)";
+            // 
+            // tpgReaderInfo
+            // 
+            this.tpgReaderInfo.Location = new System.Drawing.Point(4, 22);
+            this.tpgReaderInfo.Name = "tpgReaderInfo";
+            this.tpgReaderInfo.Size = new System.Drawing.Size(444, 225);
+            this.tpgReaderInfo.TabIndex = 1;
+            this.tpgReaderInfo.Text = "读者信息";
+            this.tpgReaderInfo.UseVisualStyleBackColor = true;
+            // 
+            // tpgBookRental
+            // 
+            this.tpgBookRental.Location = new System.Drawing.Point(4, 22);
+            this.tpgBookRental.Name = "tpgBookRental";
+            this.tpgBookRental.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgBookRental.Size = new System.Drawing.Size(444, 225);
+            this.tpgBookRental.TabIndex = 2;
+            this.tpgBookRental.Text = "书刊借阅";
+            this.tpgBookRental.UseVisualStyleBackColor = true;
+            // 
+            // tpgBookReserve
+            // 
+            this.tpgBookReserve.Location = new System.Drawing.Point(4, 22);
+            this.tpgBookReserve.Name = "tpgBookReserve";
+            this.tpgBookReserve.Size = new System.Drawing.Size(444, 225);
+            this.tpgBookReserve.TabIndex = 3;
+            this.tpgBookReserve.Text = "预约查询";
+            this.tpgBookReserve.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -307,6 +342,9 @@
         private System.Windows.Forms.ToolStripMenuItem 关于AToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 终端TToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuTerminalExit;
+        private System.Windows.Forms.TabPage tpgReaderInfo;
+        private System.Windows.Forms.TabPage tpgBookRental;
+        private System.Windows.Forms.TabPage tpgBookReserve;
 
 
     }

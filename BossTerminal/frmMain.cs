@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace BossTerminal
 {
-    public partial class Form2 : Form
+    public partial class frmMain : Form
     {
-        public Form2()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -36,6 +36,11 @@ namespace BossTerminal
         }
 
         private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
         {
 
         }
