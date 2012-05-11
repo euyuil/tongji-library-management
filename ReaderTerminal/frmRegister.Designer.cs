@@ -94,7 +94,7 @@
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(123, 120);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(366, 26);
             this.textBox1.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Location = new System.Drawing.Point(123, 152);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(366, 26);
             this.textBox2.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Location = new System.Drawing.Point(123, 56);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(366, 26);
             this.textBox3.TabIndex = 6;
@@ -121,7 +121,7 @@
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox4.Location = new System.Drawing.Point(123, 88);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(366, 26);
             this.textBox4.TabIndex = 7;
@@ -129,7 +129,7 @@
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(272, 226);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(100, 31);
             this.btnRegister.TabIndex = 8;
@@ -154,7 +154,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -181,7 +181,7 @@
             // 
             this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox5.Location = new System.Drawing.Point(123, 24);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(366, 26);
             this.textBox5.TabIndex = 1;
@@ -210,7 +210,7 @@
             this.Controls.Add(this.btnRegister);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmRegister";
             this.Text = "读者注册";

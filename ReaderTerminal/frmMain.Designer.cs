@@ -39,6 +39,9 @@
             this.cmbSearchType = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchContent = new System.Windows.Forms.TextBox();
+            this.tpgReaderInfo = new System.Windows.Forms.TabPage();
+            this.tpgBookRental = new System.Windows.Forms.TabPage();
+            this.tpgBookReserve = new System.Windows.Forms.TabPage();
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.终端TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTerminalExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,9 +52,6 @@
             this.mnuReaderLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tpgReaderInfo = new System.Windows.Forms.TabPage();
-            this.tpgBookRental = new System.Windows.Forms.TabPage();
-            this.tpgBookReserve = new System.Windows.Forms.TabPage();
             this.pnlWrapperMain.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.tpgBookSearch.SuspendLayout();
@@ -187,83 +187,6 @@
             this.txtSearchContent.Size = new System.Drawing.Size(250, 21);
             this.txtSearchContent.TabIndex = 1;
             // 
-            // mnuMain
-            // 
-            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.终端TToolStripMenuItem,
-            this.读者RToolStripMenuItem,
-            this.帮助HToolStripMenuItem});
-            this.mnuMain.Location = new System.Drawing.Point(0, 0);
-            this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(464, 25);
-            this.mnuMain.TabIndex = 1;
-            this.mnuMain.Text = "menuStrip1";
-            // 
-            // 终端TToolStripMenuItem
-            // 
-            this.终端TToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuTerminalExit});
-            this.终端TToolStripMenuItem.Name = "终端TToolStripMenuItem";
-            this.终端TToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.终端TToolStripMenuItem.Text = "终端(&T)";
-            // 
-            // mnuTerminalExit
-            // 
-            this.mnuTerminalExit.Name = "mnuTerminalExit";
-            this.mnuTerminalExit.Size = new System.Drawing.Size(152, 22);
-            this.mnuTerminalExit.Text = "退出(&X)";
-            this.mnuTerminalExit.Click += new System.EventHandler(this.mnuTerminalExit_Click);
-            // 
-            // 读者RToolStripMenuItem
-            // 
-            this.读者RToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuReaderLogin,
-            this.mnuReaderRegister,
-            this.toolStripMenuItem1,
-            this.mnuReaderLogout});
-            this.读者RToolStripMenuItem.Name = "读者RToolStripMenuItem";
-            this.读者RToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
-            this.读者RToolStripMenuItem.Text = "读者(&R)";
-            // 
-            // mnuReaderLogin
-            // 
-            this.mnuReaderLogin.Name = "mnuReaderLogin";
-            this.mnuReaderLogin.Size = new System.Drawing.Size(152, 22);
-            this.mnuReaderLogin.Text = "登录(&L)";
-            this.mnuReaderLogin.Click += new System.EventHandler(this.mnuReaderLogin_Click);
-            // 
-            // mnuReaderRegister
-            // 
-            this.mnuReaderRegister.Name = "mnuReaderRegister";
-            this.mnuReaderRegister.Size = new System.Drawing.Size(152, 22);
-            this.mnuReaderRegister.Text = "注册(&R)";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // mnuReaderLogout
-            // 
-            this.mnuReaderLogout.Enabled = false;
-            this.mnuReaderLogout.Name = "mnuReaderLogout";
-            this.mnuReaderLogout.Size = new System.Drawing.Size(152, 22);
-            this.mnuReaderLogout.Text = "登出(&O)";
-            // 
-            // 帮助HToolStripMenuItem
-            // 
-            this.帮助HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.关于AToolStripMenuItem});
-            this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
-            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
-            this.帮助HToolStripMenuItem.Text = "帮助(&H)";
-            // 
-            // 关于AToolStripMenuItem
-            // 
-            this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.关于AToolStripMenuItem.Text = "关于(&A)";
-            // 
             // tpgReaderInfo
             // 
             this.tpgReaderInfo.Location = new System.Drawing.Point(4, 22);
@@ -291,6 +214,83 @@
             this.tpgBookReserve.TabIndex = 3;
             this.tpgBookReserve.Text = "预约查询";
             this.tpgBookReserve.UseVisualStyleBackColor = true;
+            // 
+            // mnuMain
+            // 
+            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.终端TToolStripMenuItem,
+            this.读者RToolStripMenuItem,
+            this.帮助HToolStripMenuItem});
+            this.mnuMain.Location = new System.Drawing.Point(0, 0);
+            this.mnuMain.Name = "mnuMain";
+            this.mnuMain.Size = new System.Drawing.Size(464, 25);
+            this.mnuMain.TabIndex = 1;
+            this.mnuMain.Text = "menuStrip1";
+            // 
+            // 终端TToolStripMenuItem
+            // 
+            this.终端TToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuTerminalExit});
+            this.终端TToolStripMenuItem.Name = "终端TToolStripMenuItem";
+            this.终端TToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
+            this.终端TToolStripMenuItem.Text = "终端(&T)";
+            // 
+            // mnuTerminalExit
+            // 
+            this.mnuTerminalExit.Name = "mnuTerminalExit";
+            this.mnuTerminalExit.Size = new System.Drawing.Size(116, 22);
+            this.mnuTerminalExit.Text = "退出(&X)";
+            this.mnuTerminalExit.Click += new System.EventHandler(this.mnuTerminalExit_Click);
+            // 
+            // 读者RToolStripMenuItem
+            // 
+            this.读者RToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuReaderLogin,
+            this.mnuReaderRegister,
+            this.toolStripMenuItem1,
+            this.mnuReaderLogout});
+            this.读者RToolStripMenuItem.Name = "读者RToolStripMenuItem";
+            this.读者RToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
+            this.读者RToolStripMenuItem.Text = "读者(&R)";
+            // 
+            // mnuReaderLogin
+            // 
+            this.mnuReaderLogin.Name = "mnuReaderLogin";
+            this.mnuReaderLogin.Size = new System.Drawing.Size(118, 22);
+            this.mnuReaderLogin.Text = "登录(&L)";
+            this.mnuReaderLogin.Click += new System.EventHandler(this.mnuReaderLogin_Click);
+            // 
+            // mnuReaderRegister
+            // 
+            this.mnuReaderRegister.Name = "mnuReaderRegister";
+            this.mnuReaderRegister.Size = new System.Drawing.Size(118, 22);
+            this.mnuReaderRegister.Text = "注册(&R)";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(115, 6);
+            // 
+            // mnuReaderLogout
+            // 
+            this.mnuReaderLogout.Enabled = false;
+            this.mnuReaderLogout.Name = "mnuReaderLogout";
+            this.mnuReaderLogout.Size = new System.Drawing.Size(118, 22);
+            this.mnuReaderLogout.Text = "登出(&O)";
+            // 
+            // 帮助HToolStripMenuItem
+            // 
+            this.帮助HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.关于AToolStripMenuItem});
+            this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
+            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.帮助HToolStripMenuItem.Text = "帮助(&H)";
+            // 
+            // 关于AToolStripMenuItem
+            // 
+            this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
+            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.关于AToolStripMenuItem.Text = "关于(&A)";
             // 
             // frmMain
             // 

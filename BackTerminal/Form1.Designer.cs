@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 457);
+            this.ClientSize = new System.Drawing.Size(617, 457);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -156,7 +156,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "书籍管理";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
