@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBossName = new System.Windows.Forms.TextBox();
+            this.txtBossPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,23 +56,23 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "暗号为何";
             // 
-            // textBox1
+            // txtBossName
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 17);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 26);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtBossName.Location = new System.Drawing.Point(127, 17);
+            this.txtBossName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBossName.Name = "txtBossName";
+            this.txtBossName.Size = new System.Drawing.Size(225, 26);
+            this.txtBossName.TabIndex = 2;
+            this.txtBossName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtBossPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 53);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(225, 26);
-            this.textBox2.TabIndex = 3;
+            this.txtBossPassword.Location = new System.Drawing.Point(127, 53);
+            this.txtBossPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBossPassword.Name = "txtBossPassword";
+            this.txtBossPassword.PasswordChar = '●';
+            this.txtBossPassword.Size = new System.Drawing.Size(225, 26);
+            this.txtBossPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
@@ -105,8 +105,8 @@
             this.ClientSize = new System.Drawing.Size(365, 168);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBossPassword);
+            this.Controls.Add(this.txtBossName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -124,8 +124,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBossName;
+        private System.Windows.Forms.TextBox txtBossPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;
     }
