@@ -33,3 +33,6 @@ ReaderUtilities 是给图书馆的读者使用的查询工具，可以查询书�
 
 2012-05-18
 	我在 SQL Server 中测试增加了几个表，现在把 SQL 导出成文件，在根目录下的 database.sql 中。
+2012-05-30
+	CH:增添了两个表book和particular_book，导出成了SQL文件，在根目录下
+	
