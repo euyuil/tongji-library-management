@@ -33,53 +33,43 @@
             this.tpgLibrary = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tpgFront = new System.Windows.Forms.TabPage();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libraryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libraryDataSet = new BossTerminal.LibraryDataSet();
+            this.tpgManager = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tpgBack = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.工具TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出XToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.老板BToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改账号AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改密码PToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改密码PToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libraryDataSet = new BossTerminal.LibraryDataSet();
-            this.libraryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libraryTableAdapter = new BossTerminal.LibraryDataSetTableAdapters.libraryTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tpgLibrary.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tpgFront.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).BeginInit();
+            this.tpgManager.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tpgBack.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tpgLibrary);
-            this.tabControl1.Controls.Add(this.tpgFront);
-            this.tabControl1.Controls.Add(this.tpgBack);
+            this.tabControl1.Controls.Add(this.tpgManager);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
@@ -123,16 +113,46 @@
             this.dataGridView3.Size = new System.Drawing.Size(606, 305);
             this.dataGridView3.TabIndex = 0;
             // 
-            // tpgFront
+            // idDataGridViewTextBoxColumn
             // 
-            this.tpgFront.Controls.Add(this.panel3);
-            this.tpgFront.Location = new System.Drawing.Point(4, 22);
-            this.tpgFront.Name = "tpgFront";
-            this.tpgFront.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgFront.Size = new System.Drawing.Size(612, 311);
-            this.tpgFront.TabIndex = 4;
-            this.tpgFront.Text = "前台管理员管理";
-            this.tpgFront.UseVisualStyleBackColor = true;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "名称";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "地址";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // libraryBindingSource
+            // 
+            this.libraryBindingSource.DataMember = "library";
+            this.libraryBindingSource.DataSource = this.libraryDataSet;
+            // 
+            // libraryDataSet
+            // 
+            this.libraryDataSet.DataSetName = "LibraryDataSet";
+            this.libraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tpgManager
+            // 
+            this.tpgManager.Controls.Add(this.panel3);
+            this.tpgManager.Location = new System.Drawing.Point(4, 22);
+            this.tpgManager.Name = "tpgManager";
+            this.tpgManager.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgManager.Size = new System.Drawing.Size(612, 311);
+            this.tpgManager.TabIndex = 4;
+            this.tpgManager.Text = "管理员管理";
+            this.tpgManager.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -178,55 +198,6 @@
             this.Column4.HeaderText = "所在图书馆";
             this.Column4.Name = "Column4";
             // 
-            // tpgBack
-            // 
-            this.tpgBack.Controls.Add(this.panel1);
-            this.tpgBack.Location = new System.Drawing.Point(4, 22);
-            this.tpgBack.Name = "tpgBack";
-            this.tpgBack.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgBack.Size = new System.Drawing.Size(612, 311);
-            this.tpgBack.TabIndex = 6;
-            this.tpgBack.Text = "后台管理员管理";
-            this.tpgBack.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(606, 305);
-            this.panel1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column8,
-            this.Column9,
-            this.Column10});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(606, 305);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "ID";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "姓名";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "性别";
-            this.Column10.Name = "Column10";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -250,7 +221,7 @@
             // 退出XToolStripMenuItem
             // 
             this.退出XToolStripMenuItem.Name = "退出XToolStripMenuItem";
-            this.退出XToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.退出XToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出XToolStripMenuItem.Text = "退出(&X)";
             // 
             // 老板BToolStripMenuItem
@@ -265,8 +236,14 @@
             // 修改账号AToolStripMenuItem
             // 
             this.修改账号AToolStripMenuItem.Name = "修改账号AToolStripMenuItem";
-            this.修改账号AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改账号AToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.修改账号AToolStripMenuItem.Text = "修改名称(&N)";
+            // 
+            // 修改密码PToolStripMenuItem
+            // 
+            this.修改密码PToolStripMenuItem.Name = "修改密码PToolStripMenuItem";
+            this.修改密码PToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.修改密码PToolStripMenuItem.Text = "修改密码(&P)";
             // 
             // 帮助HToolStripMenuItem
             // 
@@ -282,45 +259,9 @@
             this.关于AToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.关于AToolStripMenuItem.Text = "关于(&A)";
             // 
-            // 修改密码PToolStripMenuItem
-            // 
-            this.修改密码PToolStripMenuItem.Name = "修改密码PToolStripMenuItem";
-            this.修改密码PToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.修改密码PToolStripMenuItem.Text = "修改密码(&P)";
-            // 
-            // libraryDataSet
-            // 
-            this.libraryDataSet.DataSetName = "LibraryDataSet";
-            this.libraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libraryBindingSource
-            // 
-            this.libraryBindingSource.DataMember = "library";
-            this.libraryBindingSource.DataSource = this.libraryDataSet;
-            // 
             // libraryTableAdapter
             // 
             this.libraryTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "名称";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "地址";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Width = 300;
             // 
             // frmMain
             // 
@@ -337,16 +278,13 @@
             this.tpgLibrary.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tpgFront.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.libraryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).EndInit();
+            this.tpgManager.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tpgBack.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,11 +298,8 @@
         private System.Windows.Forms.ToolStripMenuItem 退出XToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于AToolStripMenuItem;
-        private System.Windows.Forms.TabPage tpgFront;
+        private System.Windows.Forms.TabPage tpgManager;
         private System.Windows.Forms.TabPage tpgLibrary;
-        private System.Windows.Forms.TabPage tpgBack;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panel3;
@@ -373,9 +308,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.ToolStripMenuItem 老板BToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改账号AToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改密码PToolStripMenuItem;
