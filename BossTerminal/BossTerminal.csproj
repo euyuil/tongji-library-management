@@ -55,10 +55,15 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibraryDataSet.Designer.cs">
+    <Compile Include="libDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+      <DependentUpon>libDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="libDSlibrary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libDSlibrary.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,16 +84,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="LibraryDataSet.xsc">
-      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    <None Include="libDataSet.xsc">
+      <DependentUpon>libDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LibraryDataSet.xsd">
+    <None Include="libDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LibraryDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>libDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="LibraryDataSet.xss">
-      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    <None Include="libDataSet.xss">
+      <DependentUpon>libDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="libDSlibrary.xsc">
+      <DependentUpon>libDSlibrary.xsd</DependentUpon>
+    </None>
+    <None Include="libDSlibrary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>libDSlibrary.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="libDSlibrary.xss">
+      <DependentUpon>libDSlibrary.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

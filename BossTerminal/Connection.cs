@@ -14,11 +14,11 @@ namespace BossTerminal
             if (connection == null)
             {
                 string connstr =
-                    "Data Source=LYVXP\\SQLEXPRESS; " +
+                    "Data Source=10.60.1.59\\SQLEXPRESS,1433; " +
                     "Persist Security Info=True; " +
-                    "Initial Catalog=libdev; " +
-                    "User Id=libdev; " +
-                    "Password=test; ";
+                    "Initial Catalog=lib; " +
+                    "User Id=lib; " +
+                    "Password=liuyue; ";
 
                 connection = new SqlConnection(connstr);
                 connection.Open();

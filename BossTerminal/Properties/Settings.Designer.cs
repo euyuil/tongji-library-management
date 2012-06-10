@@ -33,5 +33,16 @@ namespace BossTerminal.Properties {
                 return ((string)(this["LibraryConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"10.60.1.59\\\\SQLPRESS, 1433\";Initial Catalog=lib;Persist Security Inf" +
+            "o=True;User ID=lib;Password=liuyue")]
+        public string libConnectionString {
+            get {
+                return ((string)(this["libConnectionString"]));
+            }
+        }
     }
 }

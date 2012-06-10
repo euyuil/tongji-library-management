@@ -42,8 +42,10 @@ namespace BossTerminal
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“libraryDataSet.library”中。您可以根据需要移动或删除它。
-            this.libraryTableAdapter.Fill(this.libraryDataSet.library);
+            // TODO: 这行代码将数据加载到表“libDSlibrary.library”中。您可以根据需要移动或删除它。
+            this.libraryTableAdapter.Fill(this.libDSlibrary.library);
+            // TODO: 这行代码将数据加载到表“libDataSet.manager”中。您可以根据需要移动或删除它。
+            this.managerTableAdapter.Fill(this.libDataSet.manager);
 
         }
     }

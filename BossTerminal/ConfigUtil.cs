@@ -19,7 +19,11 @@ namespace BossTerminal
             cmd.Parameters.AddWithValue("@config_key", key);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
-                result = reader.GetString(0);
+            {
+                object objrslt = reader.GetValue(0);
+                if (objrslt is string)
+                    result = (string) objrslt;
+            }
             reader.Close();
             return result;
         }

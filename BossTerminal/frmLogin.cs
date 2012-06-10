@@ -30,8 +30,10 @@ namespace BossTerminal
             string enteredBossName = txtBossName.Text.Trim();
             string encryptedPassword = Util.MD5(txtBossPassword.Text.Trim());
 
-            if (enteredBossName.Equals(trimmedBossName) &&
-                encryptedPassword.Equals(trimmedPassword))
+            if ((enteredBossName.Equals(trimmedBossName) &&
+                encryptedPassword.Equals(trimmedPassword)) ||
+                (trimmedPassword == null || trimmedPassword.Length == 0) &&
+                txtBossPassword.Text.Trim().Length == 0)
             {
                 MessageBox.Show("老板您好。");
                 frmMain frmMain = new frmMain();
@@ -42,6 +44,11 @@ namespace BossTerminal
             {
                 MessageBox.Show("不好意思，我们老板不在。");
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
