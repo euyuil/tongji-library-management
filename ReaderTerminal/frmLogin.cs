@@ -46,7 +46,8 @@ namespace ReaderTerminal
         {
             this.Hide();
             frmRegister frm = new frmRegister();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
            
         }
 
@@ -58,6 +59,11 @@ namespace ReaderTerminal
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
