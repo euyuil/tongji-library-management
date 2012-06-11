@@ -106,6 +106,7 @@
             this.lstBookResult.TabIndex = 7;
             this.lstBookResult.UseCompatibleStateImageBehavior = false;
             this.lstBookResult.SelectedIndexChanged += new System.EventHandler(this.lstBookResult_SelectedIndexChanged);
+            this.lstBookResult.DoubleClick += new System.EventHandler(this.lstBookResult_DoubleClick);
             // 
             // pnlSearchWrapper
             // 

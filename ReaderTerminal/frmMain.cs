@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
+
 namespace ReaderTerminal
 {
     public partial class frmMain : Form
@@ -110,20 +112,54 @@ namespace ReaderTerminal
                 lstBookResult.View = View.List;
                 ListViewItem item = new ListViewItem(str[0] + str[1] +"   "+ str[2]);
                 lstBookResult.Items.Add(item);
-                
-
-                
-            }
+             }
             book.Close();
         }
 
         private void lstBookResult_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void cmbSearchType_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void lstBookResult_DoubleClick(object sender, EventArgs e)
+        {
+            SqlCommand cmd;
+            SqlDataReader book = null;
+            String isbn = lstBookResult.SelectedItems[0].Text.ToString();
+            isbn = isbn.Substring(0, isbn.IndexOf(" ") + 1);
+            string sql =
+                "select * " +
+                "from book " +
+                "where isbn = @isbn";
+            cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+            cmd.Parameters.AddWithValue("@isbn", isbn);
+            book = cmd.ExecuteReader();
+            String[] str = new String[4];
+            if (book != null && book.Read())
+            {
+
+                str[0] = book[1].ToString();
+                str[1] = book[2].ToString();
+                str[2] = book[3].ToString();
+                str[3] = book[4].ToString();
+                
+            }
+            else
+            {
+                MessageBox.Show("错误");
+                book.Close();
+            }
+            book.Close();
+
+            frmBook frmbook = new frmBook(str[0], str[3], str[1], str[2]);
+            this.Hide();
+            frmbook.ShowDialog();
+            this.Show();
 
         }
     }
