@@ -10,17 +10,8 @@ namespace BackTerminal
 {
     public partial class Form4 : Form
     {
+        public string result = null;
         // returns the category name.
-        public static string ShowNewCategoryDialog()
-        {
-            string result = null;
-            Form4 form = new Form4();
-            form.ShowDialog();
-            result = form.textBox.Text;
-            form.Dispose();
-            return result;
-        }
-
         public Form4()
         {
             InitializeComponent();
@@ -28,6 +19,18 @@ namespace BackTerminal
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            result = textBox.Text;
+            if (result.Length == 0)
+            {
+                MessageBox.Show("分类不能为空，请重新输入！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+            Close();
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

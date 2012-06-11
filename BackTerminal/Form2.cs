@@ -31,8 +31,8 @@ namespace BackTerminal
         }
         private void InitializeTreeViewCategory()
         {
-            SqlConnection connection = Connection.Instance();
-            string queryString = "SELECT * FROM dbo.category ORDER BY parent_id;";
+            SqlConnection connection = Library.Connection.Instance();
+            string queryString = "SELECT * FROM dbo.category ORDER BY parent_id, title;";
             SqlCommand command = new SqlCommand(queryString, connection);
             SqlDataReader reader = command.ExecuteReader();
 
@@ -57,6 +57,7 @@ namespace BackTerminal
                 Console.Out.WriteLine(cat.title);
             }
             reader.Close();
+            tvCategory.ExpandAll();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -64,9 +65,10 @@ namespace BackTerminal
             this.Close();
         }
 
+        // 获取分类的Id
         private int GetIdByTitle(string title)
         {
-            SqlConnection connection = Connection.Instance();
+            SqlConnection connection = Library.Connection.Instance();
             string queryString = "SELECT id FROM dbo.category WHERE title='"+title+"';";
             SqlCommand command = new SqlCommand(queryString, connection);
             SqlDataReader reader = command.ExecuteReader();
@@ -81,9 +83,26 @@ namespace BackTerminal
             return id;
         }
 
+        private bool TreeViewSelected()
+        {
+            if (tvCategory.SelectedNode == null)
+            {
+                MessageBox.Show("请选择一个分类！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return false;
+            }
+            return true;
+        }
+
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            string title = Form4.ShowNewCategoryDialog();
+            if (!TreeViewSelected()) return;
+            Form4 form = new Form4();
+            form.ShowDialog();
+            Console.Write(form.result);
+            string title = form.result;
+
+            if (form.result == null) return;
+
             string parentTitle = tvCategory.SelectedNode.Text;
             string str;
             Console.Out.Write(parentTitle);
@@ -96,38 +115,41 @@ namespace BackTerminal
                 int id = GetIdByTitle(parentTitle);
                 str = "INSERT INTO dbo.category (title, parent_id) VALUES('" + title + "'," + id + ");";
             }
-            SqlConnection connection = Connection.Instance();
+            SqlConnection connection = Library.Connection.Instance();
             SqlCommand command = new SqlCommand(str, connection);
             command.ExecuteNonQuery();
 
+            MessageBox.Show("添加成功", "添加分类");
             tvCategory.Nodes.Clear();
             InitializeTreeViewCategory();
         }
 
         private void btnRemoveCategory_Click(object sender, EventArgs e)
         {
+            if (!TreeViewSelected()) return;
             string title = tvCategory.SelectedNode.Text;
-            int id = GetIdByTitle(title);
-            string str = "SELECT * FROM dbo.category WHERE parent_id=" + id + ";";
-            Console.Out.WriteLine(str);
-            SqlConnection connection = Connection.Instance();
-            SqlCommand command = new SqlCommand(str, connection);
-            SqlDataReader reader = command.ExecuteReader();
 
-            // Don't delete if the item has children.
-            bool skip = false;
-            while (reader.Read())
+            // 不能删除“全部分类”
+            if (title == root)
             {
-                skip = true;
+                MessageBox.Show("不能删除“全部分类”。请重新选择一个分类！", 
+                    "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
             }
-
-            reader.Close();
-
-            if (skip) return;
-
-            str = "DELETE FROM dbo.category WHERE title='"+title+"';";
+            string message = "你确定要删除“" + title + "”吗？";
+            const string caption = "删除分类";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+            if (result == DialogResult.No) return;
+            
+            int id = GetIdByTitle(title);
+            string str;
+            str = "DELETE FROM dbo.category WHERE title='" + title + "';";
             Console.Out.WriteLine(str);
-            command = new SqlCommand(str, connection);
+            SqlConnection connection = Library.Connection.Instance();
+            SqlCommand command = new SqlCommand(str, connection);
+
             command.ExecuteNonQuery();
 
             command.Dispose();

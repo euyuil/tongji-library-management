@@ -39,6 +39,7 @@
             // 
             this.tvCategory.Location = new System.Drawing.Point(60, 25);
             this.tvCategory.Name = "tvCategory";
+            this.tvCategory.ShowRootLines = false;
             this.tvCategory.Size = new System.Drawing.Size(204, 180);
             this.tvCategory.TabIndex = 6;
             // 
