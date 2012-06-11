@@ -43,8 +43,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCreatialnumber = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtPhoneNum = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +122,7 @@
             this.usrName.Name = "usrName";
             this.usrName.Size = new System.Drawing.Size(366, 26);
             this.usrName.TabIndex = 4;
+            this.usrName.TextChanged += new System.EventHandler(this.usrName_TextChanged);
             // 
             // label2
             // 
@@ -161,6 +162,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(366, 26);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label5
             // 
@@ -188,10 +190,10 @@
             this.tableLayoutPanel1.Controls.Add(this.txtPsw, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtCreatialnumber, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtPhoneNum, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -210,12 +212,13 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 180);
+            this.label6.Location = new System.Drawing.Point(20, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 16);
+            this.label6.Size = new System.Drawing.Size(96, 16);
             this.label6.TabIndex = 8;
-            this.label6.Text = "证件号码";
+            this.label6.Text = "证件号码(&I)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtCreatialnumber
@@ -226,22 +229,23 @@
             this.txtCreatialnumber.TabIndex = 9;
             this.txtCreatialnumber.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 212);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 16);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "电话号码";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txtPhoneNum
             // 
             this.txtPhoneNum.Location = new System.Drawing.Point(122, 215);
             this.txtPhoneNum.Name = "txtPhoneNum";
             this.txtPhoneNum.Size = new System.Drawing.Size(367, 26);
             this.txtPhoneNum.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 220);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 16);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "电话号码(&T)";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmRegister
             // 

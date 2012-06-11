@@ -24,8 +24,8 @@ namespace BossTerminal
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string trimmedBossName = ConfigUtil.GetString("boss_name").Trim();
-            string trimmedPassword = ConfigUtil.GetString("boss_password").Trim();
+            string trimmedBossName = Library.ConfigUtil.GetString("boss_name").Trim();
+            string trimmedPassword = Library.ConfigUtil.GetString("boss_password").Trim();
 
             string enteredBossName = txtBossName.Text.Trim();
             string encryptedPassword = Util.MD5(txtBossPassword.Text.Trim());

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 
-namespace BossTerminal
+namespace Library
 {
     class ConfigUtil
     {
@@ -15,7 +15,7 @@ namespace BossTerminal
                 "where config_key = @config_key";
             string result = null;
 
-            SqlCommand cmd = new SqlCommand(sql, Connection.Instance());
+            SqlCommand cmd = new SqlCommand(sql, Library.Connection.Instance());
             cmd.Parameters.AddWithValue("@config_key", key);
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())

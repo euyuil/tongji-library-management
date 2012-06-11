@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.searchButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.changeStatusButton = new System.Windows.Forms.Button();
-            this.removeBookButton = new System.Windows.Forms.Button();
-            this.addBookQuantity = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // searchBox
+            // textBox1
             // 
-            this.searchBox.Location = new System.Drawing.Point(85, 19);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(254, 21);
-            this.searchBox.TabIndex = 3;
+            this.textBox1.Location = new System.Drawing.Point(85, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(254, 21);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label1
             // 
@@ -59,14 +60,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "图书搜索";
             // 
-            // searchButton
+            // button1
             // 
-            this.searchButton.Location = new System.Drawing.Point(357, 16);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
-            this.searchButton.TabIndex = 4;
-            this.searchButton.Text = "搜索";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(357, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "搜索";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -96,32 +98,32 @@
             this.Column3.HeaderText = "状态";
             this.Column3.Name = "Column3";
             // 
-            // changeStatusButton
+            // button2
             // 
-            this.changeStatusButton.Location = new System.Drawing.Point(467, 79);
-            this.changeStatusButton.Name = "changeStatusButton";
-            this.changeStatusButton.Size = new System.Drawing.Size(123, 23);
-            this.changeStatusButton.TabIndex = 6;
-            this.changeStatusButton.Text = "修改选定图书状态";
-            this.changeStatusButton.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(467, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "修改选定图书状态";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // removeBookButton
+            // button3
             // 
-            this.removeBookButton.Location = new System.Drawing.Point(467, 120);
-            this.removeBookButton.Name = "removeBookButton";
-            this.removeBookButton.Size = new System.Drawing.Size(123, 23);
-            this.removeBookButton.TabIndex = 7;
-            this.removeBookButton.Text = "删除选定图书";
-            this.removeBookButton.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(467, 120);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "删除选定图书";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // addBookQuantity
+            // button4
             // 
-            this.addBookQuantity.Location = new System.Drawing.Point(467, 159);
-            this.addBookQuantity.Name = "addBookQuantity";
-            this.addBookQuantity.Size = new System.Drawing.Size(123, 23);
-            this.addBookQuantity.TabIndex = 8;
-            this.addBookQuantity.Text = "增购选定图书";
-            this.addBookQuantity.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(467, 159);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(123, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "增购选定图书";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -148,15 +150,16 @@
             this.ClientSize = new System.Drawing.Size(617, 457);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.addBookQuantity);
-            this.Controls.Add(this.removeBookButton);
-            this.Controls.Add(this.changeStatusButton);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "书籍管理";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,16 +168,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Button changeStatusButton;
-        private System.Windows.Forms.Button removeBookButton;
-        private System.Windows.Forms.Button addBookQuantity;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
 
