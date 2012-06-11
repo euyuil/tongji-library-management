@@ -11,15 +11,14 @@ namespace ReaderTerminal
 {
     public partial class frmLogin : Form
     {
-
         public static int readerId;
+
         public frmLogin()
         {
             InitializeComponent();
         }
-        
-            
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string strName = txtName.Text;
             string strPasw = txtPassword.Text;
@@ -27,7 +26,7 @@ namespace ReaderTerminal
                 "select id " +
                 "from reader " +
                 "where name = @strName and password = @strPasw";
-            SqlCommand cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+            SqlCommand cmd = new SqlCommand(sql, Library.Connection.Instance());
             cmd.Parameters.AddWithValue("@strName", strName);
             cmd.Parameters.AddWithValue("@strPasw", strPasw);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -49,23 +48,12 @@ namespace ReaderTerminal
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmRegister frm = new frmRegister();
             frm.ShowDialog();
             this.Show();
-           
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -57,7 +57,7 @@ namespace ReaderTerminal
             string sql =
                 "insert into reader (name, password, gender, credential_type, credential_number, telephone, register_time, expire_time, available) " +
                 "values (@name, @password, @gender, @credential_type, @credential_number, @telephone, @register_time, @expire_time, @available)";
-            SqlCommand cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+            SqlCommand cmd = new SqlCommand(sql, Library.Connection.Instance());
             cmd.Parameters.AddWithValue("@name", usrName);
             cmd.Parameters.AddWithValue("@password", usrPassword);
             cmd.Parameters.AddWithValue("@gender", gender);

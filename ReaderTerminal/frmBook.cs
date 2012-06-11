@@ -10,13 +10,13 @@ namespace ReaderTerminal
 {
     public partial class frmBook : Form
     {
-
-
         public frmBook()
         {
-
+            InitializeComponent();
         }
-        public frmBook(String bookName, String publisher, String author, String discription)
+
+        public frmBook(String bookName, String publisher,
+            String author, String discription)
         {
             InitializeComponent();
             textBox1.Text = bookName;

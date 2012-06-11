@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigUtil.cs" />
-    <Compile Include="Connection.cs" />
+    <Compile Include="..\Common\ConfigUtil.cs">
+      <Link>Common\ConfigUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Connection.cs">
+      <Link>Common\Connection.cs</Link>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
