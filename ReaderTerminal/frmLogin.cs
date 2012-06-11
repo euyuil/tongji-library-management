@@ -11,6 +11,8 @@ namespace ReaderTerminal
 {
     public partial class frmLogin : Form
     {
+
+        public static int readerId;
         public frmLogin()
         {
             InitializeComponent();
@@ -34,11 +36,16 @@ namespace ReaderTerminal
                 int id = reader.GetInt32(0);
                 frmMain main = new frmMain();
                 this.Hide();
+                readerId = id;
+
+                reader.Close();
+
                 main.ShowDialog();
             }
             else
             {
                 MessageBox.Show("你的账号或密码错误。");
+                reader.Close();
             }
         }
 

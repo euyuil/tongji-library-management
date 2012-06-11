@@ -105,6 +105,7 @@
             this.lstBookResult.Size = new System.Drawing.Size(438, 156);
             this.lstBookResult.TabIndex = 7;
             this.lstBookResult.UseCompatibleStateImageBehavior = false;
+            this.lstBookResult.SelectedIndexChanged += new System.EventHandler(this.lstBookResult_SelectedIndexChanged);
             // 
             // pnlSearchWrapper
             // 
@@ -168,6 +169,7 @@
             this.cmbSearchType.Name = "cmbSearchType";
             this.cmbSearchType.Size = new System.Drawing.Size(74, 20);
             this.cmbSearchType.TabIndex = 0;
+            this.cmbSearchType.SelectedIndexChanged += new System.EventHandler(this.cmbSearchType_SelectedIndexChanged);
             // 
             // btnSearch
             // 
@@ -178,6 +180,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "检索";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchContent
             // 
@@ -186,6 +189,7 @@
             this.txtSearchContent.Name = "txtSearchContent";
             this.txtSearchContent.Size = new System.Drawing.Size(250, 21);
             this.txtSearchContent.TabIndex = 1;
+            this.txtSearchContent.TextChanged += new System.EventHandler(this.txtSearchContent_TextChanged);
             // 
             // tpgReaderInfo
             // 
@@ -324,7 +328,6 @@
         private System.Windows.Forms.Panel pnlWrapperMain;
         private System.Windows.Forms.TabControl tabMain;
         private System.Windows.Forms.TabPage tpgBookSearch;
-        private System.Windows.Forms.ListView lstBookResult;
         private System.Windows.Forms.Panel pnlSearchWrapper;
         private System.Windows.Forms.GroupBox grpBookSearch;
         private System.Windows.Forms.Panel pnlSearchBar;
@@ -345,6 +348,7 @@
         private System.Windows.Forms.TabPage tpgReaderInfo;
         private System.Windows.Forms.TabPage tpgBookRental;
         private System.Windows.Forms.TabPage tpgBookReserve;
+        private System.Windows.Forms.ListView lstBookResult;
 
 
     }

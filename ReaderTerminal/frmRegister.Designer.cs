@@ -43,8 +43,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCreatialnumber = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtPhoneNum = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +122,7 @@
             this.usrName.Name = "usrName";
             this.usrName.Size = new System.Drawing.Size(366, 26);
             this.usrName.TabIndex = 4;
+            this.usrName.TextChanged += new System.EventHandler(this.usrName_TextChanged);
             // 
             // label2
             // 
@@ -161,6 +162,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(366, 26);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label5
             // 
@@ -226,6 +228,13 @@
             this.txtCreatialnumber.TabIndex = 9;
             this.txtCreatialnumber.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // txtPhoneNum
+            // 
+            this.txtPhoneNum.Location = new System.Drawing.Point(122, 215);
+            this.txtPhoneNum.Name = "txtPhoneNum";
+            this.txtPhoneNum.Size = new System.Drawing.Size(367, 26);
+            this.txtPhoneNum.TabIndex = 11;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -235,13 +244,6 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "电话号码";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtPhoneNum
-            // 
-            this.txtPhoneNum.Location = new System.Drawing.Point(122, 215);
-            this.txtPhoneNum.Name = "txtPhoneNum";
-            this.txtPhoneNum.Size = new System.Drawing.Size(367, 26);
-            this.txtPhoneNum.TabIndex = 11;
             // 
             // frmRegister
             // 

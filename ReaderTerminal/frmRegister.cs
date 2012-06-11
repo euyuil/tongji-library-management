@@ -81,5 +81,15 @@ namespace ReaderTerminal
         {
 
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usrName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
