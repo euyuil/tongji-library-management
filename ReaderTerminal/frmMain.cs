@@ -132,7 +132,7 @@ namespace ReaderTerminal
             SqlDataReader book = null;
             String isbn = lstBookResult.SelectedItems[0].Text.ToString();
             isbn = isbn.Substring(0, isbn.IndexOf(" ") + 1);
-            string sql =
+            String sql =
                 "select * " +
                 "from book " +
                 "where isbn = @isbn";
@@ -152,11 +152,42 @@ namespace ReaderTerminal
             else
             {
                 MessageBox.Show("错误");
-                book.Close();
+                
             }
             book.Close();
 
-            frmBook frmbook = new frmBook(str[0], str[3], str[1], str[2]);
+            SqlCommand cmd2;
+            SqlDataReader book2 = null;
+            String sql2 =
+                "SELECT " +
+                "pb.[id] AS particular_id, " +
+                "lib.[name] AS library_name, " +
+                "rt.[due_time] AS due_time " +
+                "FROM " +
+                "particular_book AS pb " +
+                "INNER JOIN library AS lib " +
+                "ON pb.[library_id] = lib.[id] " +
+                "LEFT JOIN rental AS rt " +
+                "ON pb.[id] = rt.[particular_book_id] " +
+                "WHERE pb.[book_isbn] = @isbn ";
+            cmd2 = new SqlCommand(sql2, BossTerminal.Connection.Instance());
+            cmd2.Parameters.AddWithValue("@isbn", isbn);
+            book2 = cmd2.ExecuteReader();
+            String[] str2 = new String[3];
+            String[] coinfo = new String[100];
+            for (int i = 0; book2 != null && book2.Read(); ++i )
+            {
+                str2[0] = book2[0].ToString();
+                str2[1] = book2[1].ToString();
+                str2[2] = book2[2].ToString();
+                if (str2[2] == "")
+                    str2[2] = "未借出";
+                String info = str2[0] + '\t' + str2[1]+ '\t' + str2[2] ;
+                coinfo[i] = info;
+            }
+            book2.Close();
+
+            frmBook frmbook = new frmBook(str[0], str[3], str[1], str[2], coinfo);
             this.Hide();
             frmbook.ShowDialog();
             this.Show();
