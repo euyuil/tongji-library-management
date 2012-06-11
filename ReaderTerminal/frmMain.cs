@@ -7,8 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
-
 namespace ReaderTerminal
 {
     public partial class frmMain : Form
@@ -39,7 +37,6 @@ namespace ReaderTerminal
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
-
         {
             SqlCommand cmd;
             SqlDataReader book = null;
@@ -51,7 +48,7 @@ namespace ReaderTerminal
                     "select * " +
                     "from book " +
                     "where title = @bookName";
-                cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+                cmd = new SqlCommand(sql, Library.Connection.Instance());
                 cmd.Parameters.AddWithValue("@bookName", bookName);
                 book = cmd.ExecuteReader();
             }
@@ -63,7 +60,7 @@ namespace ReaderTerminal
                     "select * " +
                     "from book " +
                     "where author = @author";
-                cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+                cmd = new SqlCommand(sql, Library.Connection.Instance());
                 cmd.Parameters.AddWithValue("@author", author);
                 book = cmd.ExecuteReader();
             }
@@ -75,7 +72,7 @@ namespace ReaderTerminal
                     "select * " +
                     "from book " +
                     "where isbn = @isbn";
-                cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+                cmd = new SqlCommand(sql, Library.Connection.Instance());
                 cmd.Parameters.AddWithValue("@isbn", isbn);
                 book = cmd.ExecuteReader();
             }
@@ -87,7 +84,7 @@ namespace ReaderTerminal
                     "select * " +
                     "from book " +
                     "where category_id = @category_id";
-                cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+                cmd = new SqlCommand(sql, Library.Connection.Instance());
                 cmd.Parameters.AddWithValue("@category_id", category_id);
                 book = cmd.ExecuteReader();
             }
@@ -99,7 +96,7 @@ namespace ReaderTerminal
                     "select * " +
                     "from book " +
                     "where publisher = @publisher";
-                cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+                cmd = new SqlCommand(sql, Library.Connection.Instance());
                 cmd.Parameters.AddWithValue("@publisher", publisher);
                 book = cmd.ExecuteReader();
             }
@@ -136,7 +133,7 @@ namespace ReaderTerminal
                 "select * " +
                 "from book " +
                 "where isbn = @isbn";
-            cmd = new SqlCommand(sql, BossTerminal.Connection.Instance());
+            cmd = new SqlCommand(sql, Library.Connection.Instance());
             cmd.Parameters.AddWithValue("@isbn", isbn);
             book = cmd.ExecuteReader();
             String[] str = new String[4];
