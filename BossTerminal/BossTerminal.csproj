@@ -43,15 +43,14 @@
   <ItemGroup>
     <Compile Include="..\Common\ConfigUtil.cs">
       <Link>Common\ConfigUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Connection.cs">
+      <Link>Common\Connection.cs</Link>
+    </Compile>
     <Compile Include="frmAddLib.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddLib.Designer.cs">
-    </Compile>
-  
-    <Compile Include="..\Common\Connection.cs">
-      <Link>Common\Connection.cs</Link>
-    </Compile>
       <DependentUpon>frmAddLib.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBossName.cs">
