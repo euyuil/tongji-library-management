@@ -190,5 +190,10 @@ namespace BackTerminal
         {
             this.Dispose();
         }
+
+        private void frmCatMan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
