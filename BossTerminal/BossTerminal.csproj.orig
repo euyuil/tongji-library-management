@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9E46724F-F853-4B10-9ABF-370EF3C7D7CD}</ProjectGuid>
+    <ProjectGuid>{40B11B69-BB6B-4E68-AE7E-44CEEF79CFF3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BackTerminal</RootNamespace>
-    <AssemblyName>BackTerminal</AssemblyName>
+    <RootNamespace>BossTerminal</RootNamespace>
+    <AssemblyName>BossTerminal</AssemblyName>
     <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,55 +41,86 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Common\ConfigUtil.cs">
+      <Link>Common\ConfigUtil.cs</Link>
+<<<<<<< HEAD
+=======
+    </Compile>
     <Compile Include="..\Common\Connection.cs">
       <Link>Common\Connection.cs</Link>
     </Compile>
-    <Compile Include="frmBookMan.cs">
+>>>>>>> a3318aff423b273b69516d2533311e701371103c
+    <Compile Include="frmAddLib.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBookMan.Designer.cs">
-      <DependentUpon>frmBookMan.cs</DependentUpon>
+    <Compile Include="frmAddLib.Designer.cs">
     </Compile>
-    <Compile Include="frmCatEdit.cs">
+  
+    <Compile Include="..\Common\Connection.cs">
+      <Link>Common\Connection.cs</Link>
+    </Compile>
+      <DependentUpon>frmAddLib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBossName.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatEdit.Designer.cs">
-      <DependentUpon>frmCatEdit.cs</DependentUpon>
+    <Compile Include="frmBossName.Designer.cs">
+      <DependentUpon>frmBossName.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCatMan.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatMan.Designer.cs">
-      <DependentUpon>frmCatMan.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBookNew.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBookNew.Designer.cs">
-      <DependentUpon>frmBookNew.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCatNew.cs">
+    <Compile Include="frmPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatNew.Designer.cs">
-      <DependentUpon>frmCatNew.cs</DependentUpon>
+    <Compile Include="frmPassword.Designer.cs">
+      <DependentUpon>frmPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="libDataSet.cs">
+      <DependentUpon>libDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="libDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="libDSlibrary.cs">
+      <DependentUpon>libDSlibrary.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="libDSlibrary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libDSlibrary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBookMan.resx">
-      <DependentUpon>frmBookMan.cs</DependentUpon>
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="frmAddLib.resx">
+      <DependentUpon>frmAddLib.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatEdit.resx">
-      <DependentUpon>frmCatEdit.cs</DependentUpon>
+    <EmbeddedResource Include="frmBossName.resx">
+      <DependentUpon>frmBossName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatMan.resx">
-      <DependentUpon>frmCatMan.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBookNew.resx">
-      <DependentUpon>frmBookNew.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatNew.resx">
-      <DependentUpon>frmCatNew.cs</DependentUpon>
+    <EmbeddedResource Include="frmPassword.resx">
+      <DependentUpon>frmPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +131,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="app.config" />
+    <None Include="libDataSet.xsc">
+      <DependentUpon>libDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="libDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>libDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="libDataSet.xss">
+      <DependentUpon>libDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="libDSlibrary.xsc">
+      <DependentUpon>libDSlibrary.xsd</DependentUpon>
+    </None>
+    <None Include="libDSlibrary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>libDSlibrary.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="libDSlibrary.xss">
+      <DependentUpon>libDSlibrary.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
