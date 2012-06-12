@@ -14,9 +14,13 @@ namespace ReaderTerminal
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+        public frmBook(String bookName, String publisher, String author, String discription, String[] information)
+=======
 
         public frmBook(String bookName, String publisher,
-            String author, String discription, String[] information)
+            String author, String discription)
+>>>>>>> 670ca44ea86c61d8512c44e04c9df5c948e442ed
         {
             InitializeComponent();
             textBox1.Text = bookName;

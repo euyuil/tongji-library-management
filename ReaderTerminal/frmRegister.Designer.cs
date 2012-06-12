@@ -41,10 +41,10 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtCreatialnumber = new System.Windows.Forms.TextBox();
             this.txtPhoneNum = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -210,17 +210,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(493, 245);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "证件号码(&I)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txtCreatialnumber
             // 
             this.txtCreatialnumber.Location = new System.Drawing.Point(122, 183);
@@ -246,6 +235,17 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "电话号码(&T)";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 188);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "证件号码(&I)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmRegister
             // 
