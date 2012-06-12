@@ -1,6 +1,6 @@
 ﻿namespace BackTerminal
 {
-    partial class Form1
+    partial class frmBookMan
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -49,6 +49,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(254, 21);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label1
             // 
@@ -67,6 +68,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "搜索";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -78,7 +80,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(28, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(361, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(417, 326);
             this.dataGridView1.TabIndex = 5;
             // 
             // Column1
@@ -157,6 +159,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "书籍管理";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace BackTerminal
 {
-    partial class Form3
+    partial class frmBookNew
     {
         /// <summary>
         /// Required designer variable.

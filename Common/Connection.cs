@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 
-namespace BossTerminal
+namespace Library
 {
     class Connection
     {
