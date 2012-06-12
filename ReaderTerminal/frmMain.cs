@@ -47,7 +47,7 @@ namespace ReaderTerminal
                 string sql =
                     "select * " +
                     "from book " +
-                    "where title = @bookName";
+                    "where title like '%'+@bookName+'%'";
                 cmd = new SqlCommand(sql, Library.Connection.Instance());
                 cmd.Parameters.AddWithValue("@bookName", bookName);
                 book = cmd.ExecuteReader();
@@ -59,7 +59,7 @@ namespace ReaderTerminal
                 string sql =
                     "select * " +
                     "from book " +
-                    "where author = @author";
+                    "where author like '%'+@author+'%'";
                 cmd = new SqlCommand(sql, Library.Connection.Instance());
                 cmd.Parameters.AddWithValue("@author", author);
                 book = cmd.ExecuteReader();
