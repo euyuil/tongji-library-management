@@ -83,6 +83,7 @@ namespace BackTerminal
             return id;
         }
 
+        // 判断用户是否选中 TreeView 中的一项
         private bool TreeViewSelected()
         {
             if (tvCategory.SelectedNode == null)
@@ -152,6 +153,39 @@ namespace BackTerminal
 
             command.ExecuteNonQuery();
 
+            command.Dispose();
+
+            tvCategory.Nodes.Clear();
+            InitializeTreeViewCategory();
+        }
+
+        private void btnEditCategory_Click(object sender, EventArgs e)
+        {
+            if (!TreeViewSelected()) return;
+            string title = tvCategory.SelectedNode.Text;
+
+            // 不能编辑“全部分类”
+            if (title == root)
+            {
+                MessageBox.Show("不能编辑“全部分类”。请重新选择一个分类！",
+                    "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+
+            frmCatEdit form = new frmCatEdit(title);
+            form.ShowDialog();
+            string newTitle = form.newTitle;
+
+            if (newTitle == null) return;
+
+            string str =
+                "UPDATE dbo.category SET title='" + newTitle + 
+                "' WHERE title='" + title + "';";
+            Console.Out.WriteLine(str);
+
+            SqlConnection connection = Library.Connection.Instance();
+            SqlCommand command = new SqlCommand(str, connection);
+            command.ExecuteNonQuery();
             command.Dispose();
 
             tvCategory.Nodes.Clear();
