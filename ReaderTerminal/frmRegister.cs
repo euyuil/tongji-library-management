@@ -48,32 +48,44 @@ namespace ReaderTerminal
             string usrName = txtName.Text;
             string usrPassword = txtPsw.Text;
             bool gender = true;
+            bool doif = false;
             bool available = true;
             DateTime time = System.DateTime.Now;
             DateTime expireTime = time; expireTime.AddYears(1);
             string usrPhone = txtPhoneNum.Text;
             string usrPassword2 = txtPsdc.Text;
             string usrMail = txtMail.Text;
+            if (!usrPassword.Equals(usrPassword2))
+            {
+                MessageBox.Show("两次密码不一致，请重新输入");
+                doif = true;
+            }
+            else doif = false;
             string sql =
                 "insert into reader (name, password, gender, credential_type, credential_number, telephone, register_time, expire_time, available) " +
                 "values (@name, @password, @gender, @credential_type, @credential_number, @telephone, @register_time, @expire_time, @available)";
-            SqlCommand cmd = new SqlCommand(sql, Library.Connection.Instance());
-            cmd.Parameters.AddWithValue("@name", usrName);
-            cmd.Parameters.AddWithValue("@password", usrPassword);
-            cmd.Parameters.AddWithValue("@gender", gender);
-            cmd.Parameters.AddWithValue("@credential_type", usrCredentialType);
-            cmd.Parameters.AddWithValue("@credential_number", usrCredentialNumber);
-            cmd.Parameters.AddWithValue("@telephone", usrPhone);
-            cmd.Parameters.AddWithValue("@register_time", time);
-            cmd.Parameters.AddWithValue("@expire_time", expireTime);
-            cmd.Parameters.AddWithValue("@available", available);
-            if (cmd.ExecuteNonQuery() == 0)
+            if (!doif)
             {
-                MessageBox.Show("用户名已被注册。");
-            }
-            else
-            {
-                this.Close();
+                SqlCommand cmd = new SqlCommand(sql, Library.Connection.Instance());
+                cmd.Parameters.AddWithValue("@name", usrName);
+                cmd.Parameters.AddWithValue("@password", usrPassword);
+                cmd.Parameters.AddWithValue("@gender", gender);
+                cmd.Parameters.AddWithValue("@credential_type", usrCredentialType);
+                cmd.Parameters.AddWithValue("@credential_number", usrCredentialNumber);
+                cmd.Parameters.AddWithValue("@telephone", usrPhone);
+                cmd.Parameters.AddWithValue("@register_time", time);
+                cmd.Parameters.AddWithValue("@expire_time", expireTime);
+                cmd.Parameters.AddWithValue("@available", available);
+
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    MessageBox.Show("用户名已被注册。");
+                }
+                if (cmd.ExecuteNonQuery() != 0)
+                {
+                    this.Close();
+                    MessageBox.Show("注册成功");
+                }
             }
         }
 
