@@ -26,6 +26,12 @@ namespace BackTerminal
                     "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 this.DialogResult = DialogResult.None;
             }
+            else if (this.textBox.Text.Length > 50)
+            {
+                MessageBox.Show("分类名的长度不能超过50",
+                    "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                this.DialogResult = DialogResult.None;
+            }
             else
                 newTitle = this.textBox.Text;            
         }

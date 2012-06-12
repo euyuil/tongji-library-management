@@ -60,11 +60,6 @@ namespace BackTerminal
             tvCategory.ExpandAll();
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         // 获取分类的Id
         private int GetIdByTitle(string title)
         {
@@ -99,10 +94,9 @@ namespace BackTerminal
             if (!TreeViewSelected()) return;
             frmCatNew form = new frmCatNew();
             form.ShowDialog();
-            Console.Write(form.result);
+            
             string title = form.result;
-
-            if (form.result == null) return;
+            if (title == null) return;
 
             string parentTitle = tvCategory.SelectedNode.Text;
             string str;
@@ -190,6 +184,11 @@ namespace BackTerminal
 
             tvCategory.Nodes.Clear();
             InitializeTreeViewCategory();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

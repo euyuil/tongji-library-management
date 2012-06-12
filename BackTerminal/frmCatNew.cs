@@ -19,13 +19,18 @@ namespace BackTerminal
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            result = textBox.Text;
-            if (result.Length == 0)
+            if (textBox.Text.Length == 0)
             {
                 MessageBox.Show("分类不能为空，请重新输入！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                return;
+                this.DialogResult = DialogResult.None;
             }
-            Close();
+            else if (textBox.Text.Length > 50)
+            {
+                MessageBox.Show("分类名的长度不能超过50",
+                    "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                this.DialogResult = DialogResult.None;
+            }
+            else result = textBox.Text;            
         }
 
         private void textBox_TextChanged(object sender, EventArgs e)
