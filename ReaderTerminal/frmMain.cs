@@ -76,16 +76,17 @@ namespace ReaderTerminal
                 cmd.Parameters.AddWithValue("@isbn", isbn);
                 book = cmd.ExecuteReader();
             }
-            if (cmbSearchType.SelectedItem.ToString().Equals("分类号"))
+            if (cmbSearchType.SelectedItem.ToString().Equals("分类"))
             {
                 lstBookResult.Clear();
-                String category_id = txtSearchContent.Text;
+                String title = txtSearchContent.Text;
                 string sql =
-                    "select * " +
-                    "from book " +
-                    "where category_id = @category_id";
+                    "SELECT b.* " +
+                    "FROM  book AS b, category AS c " +
+                    "WHERE c.title LIKE '%'+@title+'%' AND " +
+                    "c.id = b.category_id";
                 cmd = new SqlCommand(sql, Library.Connection.Instance());
-                cmd.Parameters.AddWithValue("@category_id", category_id);
+                cmd.Parameters.AddWithValue("@title", title);
                 book = cmd.ExecuteReader();
             }
             if (cmbSearchType.SelectedItem.ToString().Equals("出版社"))

@@ -164,7 +164,7 @@
             "题名",
             "责任者",
             "ISBN",
-            "分类号",
+            "分类",
             "出版社"});
             this.cmbSearchType.Location = new System.Drawing.Point(3, 3);
             this.cmbSearchType.Name = "cmbSearchType";
