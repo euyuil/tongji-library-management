@@ -42,41 +42,42 @@
             this.label1.Location = new System.Drawing.Point(16, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 16);
+            this.label1.Size = new System.Drawing.Size(154, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "老板如何称呼";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 57);
+            this.label2.Location = new System.Drawing.Point(64, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "暗号为何";
             // 
             // txtBossName
             // 
-            this.txtBossName.Location = new System.Drawing.Point(127, 17);
+            this.txtBossName.Location = new System.Drawing.Point(149, 13);
             this.txtBossName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBossName.Name = "txtBossName";
-            this.txtBossName.Size = new System.Drawing.Size(225, 26);
+            this.txtBossName.Size = new System.Drawing.Size(225, 35);
             this.txtBossName.TabIndex = 2;
             this.txtBossName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtBossPassword
             // 
-            this.txtBossPassword.Location = new System.Drawing.Point(127, 53);
+            this.txtBossPassword.Location = new System.Drawing.Point(149, 61);
             this.txtBossPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtBossPassword.Name = "txtBossPassword";
             this.txtBossPassword.PasswordChar = '●';
-            this.txtBossPassword.Size = new System.Drawing.Size(225, 26);
+            this.txtBossPassword.Size = new System.Drawing.Size(225, 35);
             this.txtBossPassword.TabIndex = 3;
+            this.txtBossPassword.TextChanged += new System.EventHandler(this.txtBossPassword_TextChanged);
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(168, 124);
+            this.btnLogin.Location = new System.Drawing.Point(68, 111);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(88, 31);
@@ -88,7 +89,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(264, 124);
+            this.btnCancel.Location = new System.Drawing.Point(235, 111);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(88, 31);
@@ -99,10 +100,10 @@
             // frmLogin
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(365, 168);
+            this.ClientSize = new System.Drawing.Size(387, 168);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtBossPassword);
