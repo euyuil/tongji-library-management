@@ -1,6 +1,6 @@
 ﻿namespace BackTerminal
 {
-    partial class Form4
+    partial class frmCatNew
     {
         /// <summary>
         /// Required designer variable.

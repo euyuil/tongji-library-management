@@ -10,10 +10,10 @@ using System.Data.SqlClient;
 
 namespace BackTerminal
 {
-    public partial class Form2 : Form
+    public partial class frmCatMan : Form
     {
         const string root = "全部分类";
-        public Form2()
+        public frmCatMan()
         {
             InitializeComponent();
             InitializeTreeViewCategory();
@@ -96,7 +96,7 @@ namespace BackTerminal
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             if (!TreeViewSelected()) return;
-            Form4 form = new Form4();
+            frmCatNew form = new frmCatNew();
             form.ShowDialog();
             Console.Write(form.result);
             string title = form.result;

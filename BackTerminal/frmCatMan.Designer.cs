@@ -1,6 +1,6 @@
 ﻿namespace BackTerminal
 {
-    partial class Form2
+    partial class frmCatMan
     {
         /// <summary>
         /// Required designer variable.
@@ -93,7 +93,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tvCategory);
             this.Name = "Form2";
-            this.Text = "书目管理";
+            this.Text = "分类管理";
             this.ResumeLayout(false);
             this.PerformLayout();
 

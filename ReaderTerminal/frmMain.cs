@@ -167,7 +167,7 @@ namespace ReaderTerminal
                 "LEFT JOIN rental AS rt " +
                 "ON pb.[id] = rt.[particular_book_id] " +
                 "WHERE pb.[book_isbn] = @isbn ";
-            cmd2 = new SqlCommand(sql2, BossTerminal.Connection.Instance());
+            cmd2 = new SqlCommand(sql2, Library.Connection.Instance());
             cmd2.Parameters.AddWithValue("@isbn", isbn);
             book2 = cmd2.ExecuteReader();
             String[] str2 = new String[3];

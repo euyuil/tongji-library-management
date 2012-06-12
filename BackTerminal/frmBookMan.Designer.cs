@@ -1,6 +1,6 @@
 ﻿namespace BackTerminal
 {
-    partial class Form1
+    partial class frmBookMan
     {
         /// <summary>
         /// 必需的设计器变量。

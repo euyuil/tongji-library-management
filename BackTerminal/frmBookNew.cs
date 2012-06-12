@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace BackTerminal
 {
-    public partial class Form3 : Form
+    public partial class frmBookNew : Form
     {
-        public Form3()
+        public frmBookNew()
         {
             InitializeComponent();
         }

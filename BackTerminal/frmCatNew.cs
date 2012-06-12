@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace BackTerminal
 {
-    public partial class Form4 : Form
+    public partial class frmCatNew : Form
     {
         public string result = null;
         // returns the category name.
-        public Form4()
+        public frmCatNew()
         {
             InitializeComponent();
         }
