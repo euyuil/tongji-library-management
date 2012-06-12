@@ -14,7 +14,7 @@ namespace BackTerminal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCatMan());
+            Application.Run(new frmBookNew());
         }
     }
 }

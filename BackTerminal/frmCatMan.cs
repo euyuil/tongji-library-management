@@ -18,7 +18,7 @@ namespace BackTerminal
             InitializeComponent();
             InitializeTreeViewCategory();
         }
-        public struct Category
+        struct Category
         {
             public int id;
             public String title;

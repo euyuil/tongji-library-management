@@ -30,7 +30,7 @@
         {
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tvCategory = new System.Windows.Forms.TreeView();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -59,12 +59,12 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "分类";
             // 
-            // treeView1
+            // tvCategory
             // 
-            this.treeView1.Location = new System.Drawing.Point(67, 138);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(204, 180);
-            this.treeView1.TabIndex = 17;
+            this.tvCategory.Location = new System.Drawing.Point(67, 138);
+            this.tvCategory.Name = "tvCategory";
+            this.tvCategory.Size = new System.Drawing.Size(204, 180);
+            this.tvCategory.TabIndex = 17;
             // 
             // textBox3
             // 
@@ -130,7 +130,7 @@
             this.textBox4.Size = new System.Drawing.Size(100, 21);
             this.textBox4.TabIndex = 23;
             // 
-            // Form3
+            // frmBookNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,14 +139,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tvCategory);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
+            this.Name = "frmBookNew";
             this.Text = "购买新书";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,7 +157,7 @@
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvCategory;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
