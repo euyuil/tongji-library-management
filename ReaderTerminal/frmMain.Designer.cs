@@ -308,7 +308,7 @@
             this.MinimumSize = new System.Drawing.Size(480, 320);
             this.Name = "frmMain";
             this.Text = "图书馆读者终端";
-            this.Load += new System.EventHandler(this.BookSearch_Load);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlWrapperMain.ResumeLayout(false);
             this.tabMain.ResumeLayout(false);
             this.tpgBookSearch.ResumeLayout(false);

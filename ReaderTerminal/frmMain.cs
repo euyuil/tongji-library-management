@@ -16,11 +16,6 @@ namespace ReaderTerminal
             InitializeComponent();
         }
 
-        private void BookSearch_Load(object sender, EventArgs e)
-        {
-            cmbSearchType.SelectedIndex = 0;
-        }
-
         private void mnuTerminalExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -190,6 +185,12 @@ namespace ReaderTerminal
             frmbook.ShowDialog();
             this.Show();
 
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            cmbSearchType.SelectedIndex = 0;
+            this.Size = new System.Drawing.Size(640, 480);
         }
     }
 }
